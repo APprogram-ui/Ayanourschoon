@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AyaNour — Contact</title>
+  <meta name="description" content="Contactgegevens en locatie van AyaNour. Neem contact op of stuur een bericht." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#1f2937;line-height:1.6;overflow-x:hidden}
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .nav-inner { width: 100%; margin: 0; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo{font-weight:700;font-size:22px;color:#0f172a}
+    .hamburger { display: none; flex-direction: column; cursor: pointer; width: 28px; height: 22px; justify-content: space-between; z-index: 200; }
+    .hamburger span { display: block; height: 3px; background: #0f172a; border-radius: 2px; transition: 0.3s; }
+    nav ul{display:flex;list-style:none;gap:24px}
+    nav a{text-decoration:none;color:#374151;font-weight:600;position:relative;padding:6px 0}
+    nav a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#0ea5e9;transition:.3s}
+    nav a:hover::after{width:100%}
+    nav a.active{color:#0f172a}
+
+    .hero{margin-top:80px;position:relative;display:flex;align-items:center;justify-content:center;height:45vh;overflow:hidden;background:#000 url('https://images.unsplash.com/photo-1520012218364-4c76f94a1f3f?auto=format&fit=crop&w=1600&q=80') center/cover}
+    .hero-content{position:relative;z-index:2;color:#fff;text-align:center;max-width:700px;padding:20px}
+    .hero-content h1{font-size:36px;margin-bottom:12px}
+
+    section{padding:80px 24px;max-width:1200px;margin:auto}
+    .contact-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+    .info-box{background:#fff;padding:24px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
+    form{display:flex;flex-direction:column;gap:12px}
+    input,textarea{padding:12px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px}
+    button{background:#0ea5e9;color:#fff;border:none;padding:12px;border-radius:8px;font-weight:700;cursor:pointer}
+    button:hover{opacity:0.95}
+
+    .kaart-container{position:relative;background:white;padding:16px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.1), 0 0 40px rgba(14,165,233,0.2);max-width:900px;margin:24px auto}
+    .kaart-container iframe{width:100%;height:350px;border:none;border-radius:14px}
+
+    footer{background:#0f172a;color:#e5e7eb;padding:60px 20px;text-align:center;margin-top:60px}
+    .whatsapp-btn { position: fixed; right: 24px; bottom: 24px; background: #25D366; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); cursor: pointer; z-index: 150; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .whatsapp-btn:hover { transform: scale(1.08); box-shadow: 0 12px 26px rgba(37, 211, 102, 0.45); }
+    .whatsapp-icon { width: 32px; height: 32px; fill: white; display: block; margin: 0 auto; }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      nav ul { position: fixed; top: 70px; right: -100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); flex-direction: column; gap: 20px; padding: 40px 20px; width: 70%; height: calc(100vh - 70px); box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: right 0.4s ease; }
+      nav ul.show { right: 0; }
+      nav a { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="logo">AyaNour</div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="werkwijze.html">Werkwijze</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Contact & Locatie</h1>
+      <p>Kom langs of stuur een bericht — we helpen je graag verder.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Neem contact op</h2>
+    <div class="contact-info">
+      <div class="info-box">
+        <h3>Adres</h3>
+        <p>Varenschut 17<br>5709 RT Helmond</p>
+        <p>📞 <a href="tel:0618523429">06 18 52 34 29</a></p>
+        <p><a href="mailto:info@AyaNour.nl">info@AyaNour.nl</a></p>
+      </div>
+
+      <div class="info-box">
+        <h3>Bericht sturen</h3>
+        <form id="contactForm" onsubmit="return stuurForm(event)">
+          <input type="text" id="naam" placeholder="Naam" required>
+          <input type="email" id="email" placeholder="E-mail" required>
+          <textarea id="bericht" rows="5" placeholder="Bericht" required></textarea>
+          <button type="submit">Verstuur</button>
+          <p id="formMelding" style="margin-top:8px;color:green;font-weight:600"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="kaart-container">
+      <iframe src="https://www.google.com/maps?q=Varenschut+17,+Helmond&output=embed" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>AyaNour</h3>
+        <p>Varenschut 17, 5709 RT Helmond</p>
+        <p>📞 06 18 52 34 29</p>
+        <p><a href="mailto:info@AyaNour.nl">✉️ info@AyaNour.nl</a></p>
+      </div>
+      <div>
+        <h3>Openingstijden</h3>
+        <p>Ma–Vr: 09:00 – 17:00</p>
+        <p>Za–Zo: Gesloten</p>
+      </div>
+    </div>
+    <p style="margin-top:40px;font-size:14px;color:#9ca3af;">© 2025 AyaNour — Alle rechten voorbehouden.</p>
+  </footer>
+
+  <div class="whatsapp-btn" id="whatsappBtn" title="Chat via WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="whatsapp-icon">
+      <path d="M256 0C114.6 0 0 114.6 0 256c0 45.4 11.9 89.4 34.6 128.1L0 512l132.5-33.5C172.3 498.3 214.3 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0zM256 470c-38.6 0-76.4-10.4-109.3-30l-7.8-4.6-78.7 20 21-81.3-5-7.8C56 329.7 44 293.9 44 256 44 138.5 138.5 44 256 44s212 94.5 212 212-94.5 214-212 214zm119.2-146.9c-6.5-3.2-38.3-19.3-44.2-21.5s-10.3-3.2-14.7 3.2c-4.4 6.5-17.1 21.5-20.9 25.9s-7.7 4.8-14.1 1.6c-38.3-19.3-63.4-34.6-88.3-77.3-6.5-11.3 6.5-10.5 18.6-34.6 2.1-4.8 1-8.9-.5-12.1-1.6-3.2-14.7-35.6-20.2-48.9-5.3-12.6-10.7-10.8-14.7-11-3.7-.2-8.1-.2-12.5-.2-4.4 0-11.7 1.6-17.8 8.1s-23.4 22.9-23.4 55.8 24 64.6 27.4 69.1c3.2 4.5 47.3 72.3 115.1 101.6 42.7 18.4 59.4 20 80.7 16.8 12.9-2.1 38.3-15.6 43.7-30.7 5.5-15.1 5.5-28 3.9-30.7-1.6-2.9-5.9-4.7-12.5-7.9z"/>
+    </svg>
+  </div>
+
+<script>
+  // WhatsApp knop
+  document.getElementById('whatsappBtn').addEventListener('click', ()=>{
+    window.open('https://wa.me/31618523429','_blank');
+  });
+
+  // Simpele contactform handler (frontend only)
+  function stuurForm(e){
+    e.preventDefault();
+    document.getElementById('formMelding').innerText = 'Bedankt! Je bericht is ontvangen. We reageren zo snel mogelijk.';
+    e.target.reset();
+    return false;
+  }
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.querySelector('nav ul');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('show');
+  });
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>
+
